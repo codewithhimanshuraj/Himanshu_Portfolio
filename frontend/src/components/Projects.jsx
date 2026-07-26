@@ -5,12 +5,12 @@ import { FiGithub, FiExternalLink } from 'react-icons/fi';
 const Projects = () => {
     const projectsList = [
         {
-            title: "MERN Ecommerce Store",
-            github: "https://github.com/codewithhimanshuraj/MERN-Ecommerce",
-            description: "Full-stack ecommerce platform with user authentication, product management, and shopping cart functionality.",
-            tech: ["MongoDB", "Express.js", "React.js", "Node.js"],
+            title: "AI-ATS Resume Checker",
+            github: "https://github.com/codewithhimanshuraj/ATS-RESUME-CHECKER",
+            description: "n AI-powered ATS (Applicant Tracking System) Resume Checker that analyzes resumes against job descriptions, calculates ATS compatibility scores.",
+            tech: ["MongoDB", "Express.js", "React.js", "Node.js","Gemini Api"],
             demo: "#",
-            image: "/ecommerce.jpg"
+            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXoNTolkZItwup8PIDdiwIlF6k7V1FPYJHpkYZY_yxpg&s"
         },
         {
             title: "Algo Visualizer",
