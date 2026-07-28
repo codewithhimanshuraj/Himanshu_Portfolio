@@ -11,7 +11,7 @@ const Login = () => {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const { data } = await axios.post('http://localhost:5000/api/admin/login', { username, password });
+            const { data } = await axios.post(`${import.meta.env.VITE_API_URL}/api/admin/login`, { username, password });
             localStorage.setItem('adminToken', data.token);
             navigate('/admin');
         } catch (err) {

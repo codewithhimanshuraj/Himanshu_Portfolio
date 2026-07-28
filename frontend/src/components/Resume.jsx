@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { FiDownload, FiEye } from 'react-icons/fi';
 
 const Resume = () => {
-    const resumeLink = "/Himanshu_Raj_Resume.pdf";
+    const resumeLink = "https://drive.google.com/file/d/12FSe_Pg2zGQHuAFzNfdGyqvjHi__Cr1s/view?usp=drivesdk";
 
     return (
         <section id="resume" className="py-20 bg-[var(--bg-secondary)]">
