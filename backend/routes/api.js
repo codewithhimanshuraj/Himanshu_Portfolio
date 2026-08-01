@@ -53,13 +53,13 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-transporter.verify((err) => {
-  if (err) {
-    console.error("SMTP VERIFY ERROR:", err);
-  } else {
-    console.log("SMTP Server Ready");
-  }
-});
+// transporter.verify((err) => {
+//   if (err) {
+//     console.error("SMTP VERIFY ERROR:", err);
+//   } else {
+//     console.log("SMTP Server Ready");
+//   }
+// });
 
 // =====================
 // Contact Form
