@@ -39,25 +39,18 @@ const protect = async (req, res, next) => {
 };
 
 // =====================
-// Nodemailer
+// Nodemailer (Brevo SMTP)
 // =====================
 
 const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
+  host: "smtp-relay.brevo.com",
   port: 587,
-  secure: false, // 587 ke liye false
+  secure: false,
   auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
+    user: process.env.BREVO_USER,
+    pass: process.env.BREVO_PASS,
   },
 });
-// transporter.verify((err) => {
-//   if (err) {
-//     console.error("SMTP VERIFY ERROR:", err);
-//   } else {
-//     console.log("SMTP Server Ready");
-//   }
-// });
 
 // =====================
 // Contact Form
@@ -68,7 +61,7 @@ router.post("/contact", async (req, res) => {
     const { fullName, email, subject, message } = req.body;
 
     const mailOptions = {
-      from: process.env.EMAIL_USER,
+      from: process.env.BREVO_USER,
       to: "himanshuraj1707@gmail.com",
       subject: `Portfolio Contact: ${subject}`,
       text: `
@@ -111,7 +104,7 @@ ${message}
       data: savedMessage,
     });
   } catch (error) {
-    console.log("Email Error:", error);
+    console.error("Email Error:", error);
 
     return res.status(500).json({
       success: false,
